@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'master', url: 'https://github.com/SUdvisha/studentmarkservice.git'
-            }
+            }do
         }
         stage('Build') {
             steps {
@@ -34,7 +34,7 @@ pipeline {
         stage('K8s Container Deployment') {
             steps {
                 script {
-                    withEnv(["KUBECONFIG=c:\\users\\test\\.kube\\config"]) {
+                    withEnv(["KUBECONFIG=c:\\users\\udvis\\.kube\\config"]) {
                         // Replace variables in YAML and create concrete files:
                         bat "envsubst < k8s/namespace-template.yaml > k8s/namespace.yaml"
                         bat "envsubst < k8s/deployment-template.yaml > k8s/deployment.yaml"
