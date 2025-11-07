@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'master', url: 'https://github.com/SUdvisha/studentmarkservice.git'
-            }do
+            }
         }
         stage('Build') {
             steps {
