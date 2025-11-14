@@ -19,6 +19,7 @@ public class StudentMarkServiceController {
         student = studentMarkService.addOneStudent(student);
         return new ResponseEntity<>(student, HttpStatus.CREATED);
     }
+//    student
 
     @GetMapping("finadAll")
     public ResponseEntity<List<Student>> findAllStudents() {
